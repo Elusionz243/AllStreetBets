@@ -1,0 +1,61 @@
+.Home {
+  background-color: #222;
+  background-image: url("../../images/art/memes/ASB_Hero_Full.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1rem;
+
+  &__content {
+    grid-row: 2 / span 3;
+    grid-column: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__title {
+    color: #fff;
+    background-color: rgba(100, 100, 100, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    font-size: 2.5rem;
+    justify-self: center;
+    align-self: flex-start;
+    text-decoration: underline;
+    grid-row: 1;
+    grid-column: 2;
+    width: fit-content;
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    color: #fff;
+    text-wrap: balance;
+    align-self: flex-start;
+  }
+
+  &__bets-btn {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: blue;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    text-align: center;
+    width: 100%;
+    align-self: flex-end;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
