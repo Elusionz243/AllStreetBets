@@ -1,47 +1,64 @@
+@use "../../index.scss" as *;
+
 .Home {
-  background-color: #222;
-  background-image: url("../../images/art/memes/ASB_Hero_Full.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  padding: 1rem;
+  background-color: $background;
+  &__hero {
+    background-image: url("../../images/art/memes/ASB_Hero_Full.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // aspect-ratio: 16 / 9;
+    height: 85vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 1rem;
+
+    &-content {
+      grid-row: 2 / span 3;
+      grid-column: 1;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-title {
+      color: #fff;
+      background-color: rgba(100, 100, 100, 0.5);
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #fff;
+      font-size: 2.5rem;
+      justify-self: center;
+      align-self: flex-start;
+      text-decoration: underline;
+      grid-row: 1;
+      grid-column: 2;
+      width: fit-content;
+    }
+
+    &-description {
+      font-size: 1.5rem;
+      color: #fff;
+      text-wrap: balance;
+      align-self: flex-start;
+      text-align: center;
+    }
+  }
 
   &__content {
-    grid-row: 2 / span 3;
-    grid-column: 1;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    // background-image: url("../../images/art/memes/ASB_Blackboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/9;
+    &-title {
+      color: #fff;
+      font-size: 2rem;
+    }
   }
-
-  &__title {
-    color: #fff;
-    background-color: rgba(100, 100, 100, 0.5);
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid #fff;
-    font-size: 2.5rem;
-    justify-self: center;
-    align-self: flex-start;
-    text-decoration: underline;
-    grid-row: 1;
-    grid-column: 2;
-    width: fit-content;
-  }
-
-  &__description {
-    font-size: 1.25rem;
-    color: #fff;
-    text-wrap: balance;
-    align-self: flex-start;
-  }
-
   &__bets-btn {
     color: #fff;
     font-size: 1.25rem;
